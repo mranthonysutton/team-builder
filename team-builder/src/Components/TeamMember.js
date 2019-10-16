@@ -15,6 +15,15 @@ const PersonContainer = styled.div`
   margin: 1.5% 0;
 `;
 
+const EditButton = styled.button`
+  width: 50%;
+  padding: 2% 0;
+  margin: 0 0 3% 0;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid slategray;
+`;
+
 const TeamMember = props => {
   console.log(props);
   return (
@@ -26,6 +35,7 @@ const TeamMember = props => {
             <h2>{person.fullName}</h2>
             <p>{person.email}</p>
             <p>{person.role}</p>
+            <EditButton onClick={() => console.log(index)}>Edit</EditButton>
           </PersonContainer>
         );
       })}

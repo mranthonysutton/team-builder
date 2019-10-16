@@ -36,7 +36,7 @@ const FormButton = styled.button`
   width: 60%;
   padding: 3%;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid slategray;
   font-size: 1.2rem;
   cursor: pointer;
 `;
