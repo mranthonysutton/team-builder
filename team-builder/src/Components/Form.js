@@ -7,8 +7,10 @@ const Form = props => {
     role: ""
   });
 
+  // addTeamMember is passed in from the App.js
   const submitForm = event => {
     event.preventDefault();
+    props.addTeamMember(personData);
     setPersonData({ fullName: "", email: "", role: "" });
   };
 
@@ -33,8 +35,8 @@ const Form = props => {
       <input
         id="email"
         name="email"
-        type="text"
-        placeholder="Last Name"
+        type="email"
+        placeholder="email@email.com"
         onChange={changeHandler}
         value={personData.email}
       />
@@ -45,7 +47,7 @@ const Form = props => {
           id="role"
           name="role"
           type="text"
-          placeholder="Role"
+          placeholder="What is your role?"
           onChange={changeHandler}
           value={personData.role}
         />
